@@ -15,5 +15,8 @@ use App\Http\Controllers\SlidesController;
 |
 */
 
+//A route to list the campaigns available
 Route::get('/campaigns', [SlidesController::class, 'getCampaigns']);
+
+//A route to get the slides for a given campaign.
 Route::get('/slides/{id}', [SlidesController::class, 'getSlides']);

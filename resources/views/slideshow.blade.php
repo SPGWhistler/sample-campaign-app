@@ -533,6 +533,10 @@
                 .then(response => response.json())
                 .then(data => {
                     console.log(data);
+                    if (!data || data.length <= 0) {
+                        alert('The specified campaign does not have any media to display.');
+                        return;
+                    }
                     let slides = [];
                     let thumbs = [];
                     let noImages = [];
